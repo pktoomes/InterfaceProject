@@ -65,12 +65,15 @@ public class Familiar extends AbstractSoldier implements InterfaceFamiliar {
 
     public void fight() {
         while (this.ammo >= 1) {
-            double whichMove = Math.random();
-            if (whichMove % 10 == 0) {
+
+            if (this.ammo >= 6 && this.ammo < 7) {
                 this.selfcare();
             } else {
                 this.scratch();
             }
+        }
+        if (this.ammo <= 1) {
+            System.out.println(this.name + " the " + this.rank + ": " + "I have to go now");
         }
     }
 }
