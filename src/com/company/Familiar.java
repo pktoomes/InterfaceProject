@@ -7,7 +7,7 @@ public class Familiar extends AbstractSoldier implements InterfaceFamiliar {
         this.name = name;
         this.rank = rank;
         this.ammo =  Math.random() * 10;
-       catPoints = Math.random();
+        catPoints = Math.random();
     }
 
     private double getCatPoints() {

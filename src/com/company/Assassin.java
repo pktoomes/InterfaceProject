@@ -15,7 +15,7 @@ public class Assassin extends AbstractSoldier implements InterfaceAssassin {
     }
 
     public String eat() {
-        if (this.getDeadlySkills() <= 0) {
+        if (this.getDeadlySkills() <= 0.5) {
             System.out.println(this.name + " the " + this.rank + ": " + "sip");
             this.ammo += 10;
             return "sip";
@@ -26,7 +26,7 @@ public class Assassin extends AbstractSoldier implements InterfaceAssassin {
 
     public String sleep() {
         if (this.getDeadlySkills() <= 0.1) {
-            System.out.println(this.name + " the " + this.rank + ": " + "Too much sleeping draught...");
+            System.out.println(this.name + " the " + this.rank + ": " + "Sleeping gas...");
             return "Snore";
         } else {
             return "I'm not tired";
